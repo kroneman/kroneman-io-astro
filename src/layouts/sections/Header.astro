@@ -9,7 +9,6 @@ const isActive = (href: string) => href === pathname || href === pathname.replac
 
 <Header Logo={SITE_TITLE}>
 	<nav>
-		<HeaderLink href="/" isActive={isActive('/')}>Home</HeaderLink>
 		<HeaderLink href="/blog" isActive={isActive('/blog')}>Blog</HeaderLink>
 		<HeaderLink href="/about" isActive={isActive('/about')}>About</HeaderLink>
 	</nav>

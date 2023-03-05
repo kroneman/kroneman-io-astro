@@ -24,13 +24,15 @@ const articleProps = {
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body>
+	<Layout.Body>
 		<Header />
 		<Layout.Main>
 			<BlogPost {...articleProps}>
 				<slot />
 			</BlogPost>
 		</Layout.Main>
-		<Footer />
-	</body>
+		<Layout.Footer>
+			<Footer />
+		</Layout.Footer>
+	</Layout.Body>
 </html>

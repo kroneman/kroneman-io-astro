@@ -6,7 +6,16 @@ pubDate: "Mar 4 2023"
 
 ## Overview
 
+- [Goals](#goals)
+- [Geting up and Running](#getting-up-and-running)
+- [First Frustration](#the-first-frustration-using-astro-context-in-a-react-component)
+
 ## Goals
+
+- Keep design simple
+- Focus on the blogging experience
+- Use storybook to build out components
+- Find a balance between writing Astro components and React components
 
 ## Getting up and Running
 
@@ -56,3 +65,5 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ```
 
 I don't see a way to pull this into react component. So I would have to "Prop Drill" from an astro template, into the `Header` component and from there passing it along into the `HeaderLink`.
+
+Looking at the [astro docs](https://docs.astro.build/en/core-concepts/framework-components/#can-i-use-astro-components-inside-my-framework-components) confirms that once you're in a specific framework you won't have conext of the astro object, which is probably for the best.

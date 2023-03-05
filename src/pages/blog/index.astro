@@ -34,7 +34,7 @@ const posts = (await getCollection('blog')).sort(
 			}
 		</style>
 	</head>
-	<body>
+	<Layout.Body>
 		<Header />
 		<Layout.Main>
 			<section>
@@ -50,6 +50,8 @@ const posts = (await getCollection('blog')).sort(
 				</ul>
 			</section>
 		</Layout.Main>
-		<Footer />
-	</body>
+		<Layout.Footer>
+			<Footer />
+		</Layout.Footer>
+	</Layout.Body>
 </html>
