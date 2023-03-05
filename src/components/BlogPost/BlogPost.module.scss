@@ -1,0 +1,40 @@
+
+.BlogPost {
+    font-size: 18px;
+    hr {
+        border-top: 1px solid #ddd;
+        margin: 1rem 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-bottom: 10px;
+    }
+
+    li {
+        margin-left: 16px;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+}
+
+.Title {
+    font-size: 2em;
+    margin: 0.25em 0 0;
+}
+
+.LastUpdated {
+    font-style: italic;
+}
+
