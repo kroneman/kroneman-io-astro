@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <>
-      &copy; {today.getFullYear()}. All rights reserved.
+      &copy; {today.getFullYear()} Lennart Kroneman. All rights reserved.
     </>
   );
 };
