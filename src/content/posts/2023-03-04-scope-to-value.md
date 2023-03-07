@@ -75,4 +75,11 @@ I hope you get to read this article before I've added too much functionality to 
 
 ## Result
 
-- Published this site 2 days after starting to work on it.
+Reducing scope and leveraging the progress projects like: `astro`, `next`, and `mdx`; as well as companies like: `github` and `vercel`; let you build out a great blogging site in roughly **2 days**.
+
+Given that:
+
+- You lower your expectations
+- You Stay focused on the goal
+- Go for a truly minimal experience
+
