@@ -7,7 +7,7 @@ import BlogPost from '../components/BlogPost';
 import Footer from '../components/Footer';
 import Layout from '../components/Layout';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'posts'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 const articleProps = {
