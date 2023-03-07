@@ -75,7 +75,7 @@ I hope you get to read this article before I've added too much functionality to 
 
 ## Result
 
-Reducing scope and leveraging the progress projects like: `astro`, `next`, and `mdx`; as well as companies like: `github` and `vercel`; let you build out a great blogging site in roughly **2 days**.
+Reducing scope, leveraging the progress projects like: `astro`, `next`, and `mdx` have made; and using the tools companies like: `github` and `vercel` have built let you build out a great blogging platform in roughly **2 days**.
 
 Given that:
 
