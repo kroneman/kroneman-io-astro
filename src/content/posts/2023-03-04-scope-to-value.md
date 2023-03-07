@@ -53,21 +53,26 @@ To learn more about mdx see [the mdx documentation](https://mdxjs.com/table-of-c
 
 #### So a definition of minimial scope would include
 
-- Homepage, that practically shows "featured articles"
+- Homepage, simplified to just be an introduction
 - Blog Page, that shows blog posts in reverse chronological order
 - Blog Article Page, should probably write a couple of these.
 - Hosting through vercel
 - Release pipeline using github actions
 - Links to social
 
-####  And Exclude
+#### And Exclude
 
 - Comments on articles (maybe one day)
 - To be filled out as I get side-tracked
 - Projects (to be included in a later iteration)
+- Responsive Styles (i'll follow up with responsive styles)
 
 ### Staying focused on getting something out the door, even if it isn't perfect
 
 Hereby the first article, hopefully a piece of value that encourages you to built your first blog and to keep it simple.
 
 I hope you get to read this article before I've added too much functionality to the site or go back in time and check out the git repository to run the version this article was first published on.
+
+## Result
+
+- Published this site 2 days after starting to work on it.
