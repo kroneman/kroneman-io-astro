@@ -1,6 +1,6 @@
 ---
-title: "A Blog Powered by Astro"
-description: "First impressions of Astro mixed with React"
+title: "Building a blog, reducing scope to deliver value sooner"
+description: "A kanban and product oriented approach to shipping value quickly"
 pubDate: "Mar 4 2023"
 ---
 
@@ -9,6 +9,8 @@ pubDate: "Mar 4 2023"
 - [Motivation](#motivation)
 - [Goals](#goals)
 	- [Starting with content](#starting-with-content)
+	- [Building the simplest thing](#building-the-simplest-thing-that-accomplishes-the-goal)
+	- [Staying Focused](#staying-focused-on-getting-something-out-the-door-even-if-it-isnt-perfect)
 
 ## Motivation
 
@@ -28,7 +30,7 @@ This one is pretty straightfoward. By starting with writing one or more articles
 
 One of the features that was a must-have for astro, was to write content using `markdown` and `mdx`.
 
-**markdown**
+_markdown_
 
 Markdown is essentially a convenient way to write content. It's a happy medium between writing html and editing content in a cms.
 
@@ -36,7 +38,7 @@ Headings for example are written using a `#` so `# Heading` is equivalent to `<h
 
 To learn more about some of the available syntax of markdown see the [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 
-**mdx**
+_mdx_
 
 So why not just use markdown by itself?
 
@@ -45,3 +47,26 @@ Markdown is great for simple content, but has some challenges when trying to mix
 Mdx brands itself as "markdown for the component era" allowing you to import and render "React, Vue, Svelte" or other components into markdown.
 
 To learn more about mdx see [the mdx documentation](https://mdxjs.com/table-of-components/)
+
+### Building the simplest thing that accomplishes the goal
+
+_So a definition of minimial scope would include:_
+
+- Homepage, that practically shows "featured articles"
+- Blog Page, that shows blog posts in reverse chronological order
+- Blog Article Page, should probably write a couple of these.
+- Hosting through vercel
+- Release pipeline using github actions
+- Links to social
+
+_And Exclude:_
+
+- Comments on articles (maybe one day)
+- To be filled out as I get side-tracked
+- Projects (to be included in a later iteration)
+
+### Staying focused on getting something out the door, even if it isn't perfect
+
+Hereby the first article, hopefully a piece of value that encourages you to built your first blog and to keep it simple.
+
+I hope you get to read this article before I've added too much functionality to the site or go back in time and check out the git repository to run the version this article was first published on.
