@@ -15,7 +15,7 @@ This ended up being way simpler than I thought.
 - [Deploying](#deploying)
 - [Update DNS records](#updating-dns-records)
 
-## Assumpetions
+## Assumptions
 
 This post assumes the following
 
