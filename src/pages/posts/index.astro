@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import BlogCard from "../../components/BlogCard";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("posts")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
@@ -32,7 +32,7 @@ const posts = (await getCollection("blog")).sort(
                 datePublished={post.data.pubDate}
                 description={post.data.description}
                 title={post.data.title}
-                href={`/blog/${post.slug}`}
+                href={`/posts/${post.slug}`}
               />
             ))
           }
