@@ -1,5 +1,5 @@
 import React from "react";
-import FormattedDate from '../FormattedDate';
+import FormattedDate from "../FormattedDate";
 
 import styles from "./BlogPost.module.scss";
 
@@ -13,7 +13,14 @@ type BlogPostProps = {
 };
 
 const BlogPost = (props: BlogPostProps) => {
-  const { title, heroImage, pubDate, updatedDate, children, description } = props;
+  const {
+    title,
+    heroImage,
+    pubDate,
+    updatedDate,
+    children,
+    description
+  } = props;
 
   return (
     <article className={styles.BlogPost}>
@@ -21,12 +28,17 @@ const BlogPost = (props: BlogPostProps) => {
       <h1 class={styles.Title}>
         {title}
       </h1>
-      <p className={styles.Description}>{description}</p>
-      <FormattedDate date={pubDate} />
-      {updatedDate &&
-        <div className={styles.LastUpdated}>
-          Last updated on <FormattedDate date={updatedDate} />
-        </div>}
+      <p className={styles.Description}>
+        {description}
+      </p>
+      <div className={styles.Dates}>
+        <FormattedDate date={pubDate} />
+        {updatedDate &&
+          <div className={styles.LastUpdated}>
+            Last updated on <FormattedDate date={updatedDate} />
+          </div>}
+      </div>
+
       <hr />
       {children}
     </article>

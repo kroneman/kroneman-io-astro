@@ -75,9 +75,13 @@
     margin: 0.25em 0 0;
 }
 
-
+.Dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .LastUpdated {
-    font-style: italic;
+    font-size: .8em;
 }
 

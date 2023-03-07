@@ -1,7 +1,8 @@
 ---
 title: "Building a Blog: Reducing scope and delivering value sooner"
-description: "I'm applying a kanban and product oriented approach to shipping value quickly and finishing a personal project that delivers some value."
+description: "I'm applying a kanban and product oriented approach to shipping value quickly and finishing a personal project that delivers some value. Zero to production in two days."
 pubDate: "Mar 4 2023"
+updatedDate: "Mar 6 2023"
 ---
 
 ## Overview
