@@ -1,6 +1,6 @@
 ---
-title: "Building a blog, reducing scope to deliver value sooner"
-description: "A kanban and product oriented approach to shipping value quickly"
+title: "Building a Blog: Reducing scope and delivering value sooner"
+description: "I'm applying a kanban and product oriented approach to shipping value quickly and finishing a personal project that delivers some value."
 pubDate: "Mar 4 2023"
 ---
 
@@ -30,7 +30,7 @@ This one is pretty straightfoward. By starting with writing one or more articles
 
 One of the features that was a must-have for astro, was to write content using `markdown` and `mdx`.
 
-_markdown_
+#### markdown
 
 Markdown is essentially a convenient way to write content. It's a happy medium between writing html and editing content in a cms.
 
@@ -38,7 +38,7 @@ Headings for example are written using a `#` so `# Heading` is equivalent to `<h
 
 To learn more about some of the available syntax of markdown see the [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
 
-_mdx_
+#### mdx
 
 So why not just use markdown by itself?
 
@@ -50,7 +50,7 @@ To learn more about mdx see [the mdx documentation](https://mdxjs.com/table-of-c
 
 ### Building the simplest thing that accomplishes the goal
 
-_So a definition of minimial scope would include:_
+#### So a definition of minimial scope would include
 
 - Homepage, that practically shows "featured articles"
 - Blog Page, that shows blog posts in reverse chronological order
@@ -59,7 +59,7 @@ _So a definition of minimial scope would include:_
 - Release pipeline using github actions
 - Links to social
 
-_And Exclude:_
+####  And Exclude
 
 - Comments on articles (maybe one day)
 - To be filled out as I get side-tracked

@@ -9,10 +9,11 @@ type BlogPostProps = {
   pubDate?: Date;
   updatedDate?: Date;
   children: React.ReactNode | React.ReactNode[];
+  description: string;
 };
 
 const BlogPost = (props: BlogPostProps) => {
-  const { title, heroImage, pubDate, updatedDate, children } = props;
+  const { title, heroImage, pubDate, updatedDate, children, description } = props;
 
   return (
     <article className={styles.BlogPost}>
@@ -20,6 +21,7 @@ const BlogPost = (props: BlogPostProps) => {
       <h1 class={styles.Title}>
         {title}
       </h1>
+      <p className={styles.Description}>{description}</p>
       <FormattedDate date={pubDate} />
       {updatedDate &&
         <div className={styles.LastUpdated}>

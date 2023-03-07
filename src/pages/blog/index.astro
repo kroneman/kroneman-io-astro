@@ -1,57 +1,47 @@
 ---
-import BaseHead from '../../layouts/sections/BaseHead.astro';
-import Header from '../../layouts/sections/Header.astro';
-import Footer from '../../components/Footer';
-import Layout from '../../components/Layout';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+import BaseHead from "../../layouts/sections/BaseHead.astro";
+import Header from "../../layouts/sections/Header.astro";
+import Footer from "../../components/Footer";
+import Layout from "../../components/Layout";
+import BlogCard from "../../components/BlogCard";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-			}
-			ul li :global(time) {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
-		</style>
-	</head>
-	<Layout.Body>
-		<Header />
-		<Layout.Main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</Layout.Main>
-		<Layout.Footer>
-			<Footer />
-		</Layout.Footer>
-	</Layout.Body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+
+  <Layout.Body>
+    <Header />
+    <Layout.Main>
+      <h1 class="text-4xl mb-8 mt-4 font-bold">Posts</h1>
+      <section>
+        <ul>
+          {
+            posts.map((post) => (
+              <BlogCard
+                className="mb-8"
+                datePublished={post.data.pubDate}
+                description={post.data.description}
+                title={post.data.title}
+                href={`/blog/${post.slug}`}
+              />
+            ))
+          }
+        </ul>
+      </section>
+    </Layout.Main>
+    <Layout.Footer>
+      <Footer />
+    </Layout.Footer>
+  </Layout.Body>
+
 </html>
