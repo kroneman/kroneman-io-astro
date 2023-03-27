@@ -1,5 +1,5 @@
 ---
-title: "Systems, Shortcuts, and the motivation for Building a Chrome Extension"
+title: "Systems, Shortcuts, and The Motivation For Building a Chrome Extension"
 description: "Developing a system and extension to manage tabs in chrome"
 pubDate: "Mar 26 2023"
 ---
