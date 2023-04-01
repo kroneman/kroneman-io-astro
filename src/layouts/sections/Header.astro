@@ -1,15 +1,15 @@
 ---
-import Header from "../../components/Header";
-import HeaderLink from "../../components/HeaderLink";
-import { SITE_TITLE } from "../../consts";
+import Header from '../../components/Header';
+import HeaderLink from '../../components/HeaderLink';
+import { SITE_TITLE } from '../../consts';
 
 const { pathname } = Astro.url;
 const isActive = (href: string) =>
-  href === pathname || href === pathname.replace(/\/$/, "");
+  href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
 <Header Logo={SITE_TITLE}>
   <nav>
-    <HeaderLink href="/posts" isActive={isActive("/posts")}>Posts</HeaderLink>
+    <HeaderLink href="/posts" isActive={isActive('/posts')}>Posts</HeaderLink>
   </nav>
 </Header>

@@ -1,95 +1,99 @@
 .BlogPost {
-    font-size: 18px;
-    margin-bottom: 256px;
+  font-size: 18px;
+  margin-bottom: 256px;
 
-    $h1-font-size: 36px;
-    $h2-font-size: 26px;
-    $h3-font-size: 20px;
-    $h4-font-size: 16px;
+  $h1-font-size: 36px;
+  $h2-font-size: 26px;
+  $h3-font-size: 20px;
+  $h4-font-size: 16px;
 
-    hr {
-        border-top: 1px solid #ddd;
-        margin: 1rem 0;
+  hr {
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+  }
+
+  h1 {
+    font-size: $h1-font-size;
+    margin-bottom: $h1-font-size / 2;
+    font-weight: bold;
+  }
+
+  h2 {
+    margin-top: $h2-font-size * 1.5;
+    font-size: $h2-font-size;
+    margin-bottom: $h2-font-size / 2;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin-top: $h3-font-size * 1.5;
+    font-size: $h3-font-size;
+    margin-bottom: $h3-font-size / 2;
+    font-weight: bold;
+  }
+
+  h4 {
+    margin-top: $h4-font-size * 1.5;
+    font-size: $h4-font-size;
+    margin-bottom: $h4-font-size / 2;
+    font-weight: 600;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-bottom: 10px;
+    padding: 0;
+    margin-left: 4px;
+  }
+
+  li {
+    margin-left: 16px;
+  }
+
+  p {
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    + p {
+      margin-top: 0;
     }
+  }
 
-    h1 {
-        font-size: $h1-font-size;
-        margin-bottom: $h1-font-size / 2;
-        font-weight: bold;
-    }
+  .Description {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
 
-    h2 {
-        margin-top: $h2-font-size * 1.5;
-        font-size: $h2-font-size;
-        margin-bottom: $h2-font-size / 2;
-        font-weight: bold;
-    }
+  pre {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
 
-    h3 {
-        margin-top: $h3-font-size * 1.5;
-        font-size: $h3-font-size;
-        margin-bottom: $h3-font-size / 2;
-        font-weight: bold;
-    }
-
-    h4 {
-        margin-top: $h4-font-size * 1.5;
-        font-size: $h4-font-size;
-        margin-bottom: $h4-font-size / 2;
-        font-weight: 600;
-    }
-
-    ul {
-        list-style-type: disc;
-        margin-bottom: 10px;
-        padding: 0;
-        margin-left: 4px;
-    }
-
-    li {
-        margin-left: 16px;
-    }
-
-    p {
-        margin-top: 12px;
-        margin-bottom: 24px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        + p {
-            margin-top: 0;
-        }
-    }
-
-    .Description {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-
-    pre {
-        margin-top: 32px;
-        margin-bottom: 32px;
-    }
-
-    ol {
-        list-style-type: decimal;
-        padding: 0;
-        margin-left: 10px;
-    }
+  ol {
+    list-style-type: decimal;
+    padding: 0;
+    margin-left: 10px;
+  }
 }
 
 .Title {
-    font-size: 2em;
-    margin: 0.25em 0 0;
+  font-size: 2em;
+  margin: 0.25em 0 0;
 }
 
 .Dates {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .LastUpdated {
-    font-size: .8em;
+  font-size: 0.8em;
 }
-

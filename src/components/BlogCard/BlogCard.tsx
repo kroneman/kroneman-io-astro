@@ -1,9 +1,9 @@
-import React from "react";
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
-import FormattedDate from "../FormattedDate";
+import FormattedDate from '../FormattedDate';
 
-import styles from "./BlogCard.module.scss";
+import styles from './BlogCard.module.scss';
 
 type BlogCardProps = {
   datePublished?: Date;
@@ -20,13 +20,9 @@ const BlogCard = (props: BlogCardProps) => {
   return (
     <article className={blogCardClassNames}>
       <a href={href}>
-        <h1>
-          {title}
-        </h1>
+        <h1>{title}</h1>
         <FormattedDate date={datePublished} className={styles.BlogDate} />
-        <p className={styles.BlogDescription}>
-          {description}
-        </p>
+        <p className={styles.BlogDescription}>{description}</p>
       </a>
     </article>
   );

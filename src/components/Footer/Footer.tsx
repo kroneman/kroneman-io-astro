@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   const today = new Date();
 
   return (
-    <>
-      &copy; {today.getFullYear()} Lennart Kroneman. All rights reserved.
-    </>
+    <>&copy; {today.getFullYear()} Lennart Kroneman. All rights reserved.</>
   );
 };
 
