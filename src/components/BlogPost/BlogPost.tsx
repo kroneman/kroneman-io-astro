@@ -1,7 +1,7 @@
-import React from "react";
-import FormattedDate from "../FormattedDate";
+import type React from 'react';
+import FormattedDate from '../FormattedDate';
 
-import styles from "./BlogPost.module.scss";
+import styles from './BlogPost.module.scss';
 
 type BlogPostProps = {
   title: string;
@@ -13,30 +13,21 @@ type BlogPostProps = {
 };
 
 const BlogPost = (props: BlogPostProps) => {
-  const {
-    title,
-    heroImage,
-    pubDate,
-    updatedDate,
-    children,
-    description
-  } = props;
+  const { title, heroImage, pubDate, updatedDate, children, description } =
+    props;
 
   return (
     <article className={styles.BlogPost}>
       {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-      <h1 class={styles.Title}>
-        {title}
-      </h1>
-      <p className={styles.Description}>
-        {description}
-      </p>
+      <h1 className={styles.Title}>{title}</h1>
+      <p className={styles.Description}>{description}</p>
       <div className={styles.Dates}>
         <FormattedDate date={pubDate} />
-        {updatedDate &&
+        {updatedDate && (
           <div className={styles.LastUpdated}>
             Last updated on <FormattedDate date={updatedDate} />
-          </div>}
+          </div>
+        )}
       </div>
 
       <hr />

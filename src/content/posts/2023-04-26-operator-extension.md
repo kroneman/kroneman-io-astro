@@ -1,16 +1,16 @@
 ---
-title: "Systems, Shortcuts, and The Motivation For Building a Chrome Extension"
-description: "Developing a system and extension to manage tabs in chrome"
-pubDate: "Mar 26 2023"
+title: 'Systems, Shortcuts, and The Motivation For Building a Chrome Extension'
+description: 'Developing a system and extension to manage tabs in chrome'
+pubDate: 'Mar 26 2023'
 ---
 
 ## Overview
 
 - [Motivation](#motivation)
 - [Pieces of the puzzle](#the-pieces-of-the-puzzle)
-    - [A System](#a-system)
-    - [A Runner](#a-runner)
-    - [Shortcuts](#existing-browser-shortucts)
+  - [A System](#a-system)
+  - [A Runner](#a-runner)
+  - [Shortcuts](#existing-browser-shortucts)
 - [The Result](#the-result)
 
 ## Motivation
@@ -35,7 +35,7 @@ The resulting system goes as follows:
 
 ### A Runner
 
-A more recent development in software has been the concept of a `command pallete` or `runner`. Essentially it's a search box where every possible command in the current context is searchable and can be executed. Things like the macOS `spotlight`, [Alfred](https://www.alfredapp.com/) but they've started to show up as an expected feature in software. 
+A more recent development in software has been the concept of a `command pallete` or `runner`. Essentially it's a search box where every possible command in the current context is searchable and can be executed. Things like the macOS `spotlight`, [Alfred](https://www.alfredapp.com/) but they've started to show up as an expected feature in software.
 
 - Vscode has `cmd + shift + p`
 - Intellij products have `cmd + shift + a`

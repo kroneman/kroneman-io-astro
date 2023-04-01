@@ -1,18 +1,15 @@
-import React from "react";
-
-import style from "./Header.module.scss";
+import type React from 'react';
+import style from './Header.module.scss';
 
 type HeaderProps = {
-  Logo: React.ReactNode | React.ReactNode[];
-};
+  Logo?: React.ReactNode | React.ReactNode[];
+} & React.ComponentProps<'header'>;
 
 const Header = (props: HeaderProps) => {
   return (
     <header className={style.Header}>
       <a href="/">
-        <h2 className={style.Title}>
-          {props.Logo}
-        </h2>
+        <h2 className={style.Title}>{props.Logo}</h2>
       </a>
       {props.children}
     </header>

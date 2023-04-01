@@ -11,28 +11,28 @@ type Props = CollectionEntry<'posts'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 const articleProps = {
-	title,
-	description,
-	pubDate,
-	updatedDate,
-	heroImage
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
 };
 ---
 
 <html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-	<Layout.Body>
-		<Header />
-		<Layout.Main>
-			<BlogPost {...articleProps}>
-				<slot />
-			</BlogPost>
-		</Layout.Main>
-		<Layout.Footer>
-			<Footer />
-		</Layout.Footer>
-	</Layout.Body>
+  <Layout.Body>
+    <Header />
+    <Layout.Main>
+      <BlogPost {...articleProps}>
+        <slot />
+      </BlogPost>
+    </Layout.Main>
+    <Layout.Footer>
+      <Footer />
+    </Layout.Footer>
+  </Layout.Body>
 </html>

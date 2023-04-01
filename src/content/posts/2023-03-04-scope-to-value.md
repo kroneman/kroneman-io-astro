@@ -1,17 +1,17 @@
 ---
-title: "Building a Blog: Reducing scope and delivering value sooner"
+title: 'Building a Blog: Reducing scope and delivering value sooner'
 description: "I'm applying a kanban and product oriented approach to shipping value quickly and finishing a personal project that delivers some value. Zero to production in two days."
-pubDate: "Mar 4 2023"
-updatedDate: "Mar 6 2023"
+pubDate: 'Mar 4 2023'
+updatedDate: 'Mar 6 2023'
 ---
 
 ## Overview
 
 - [Motivation](#motivation)
 - [Goals](#goals)
-	- [Starting with content](#starting-with-content)
-	- [Building the simplest thing](#building-the-simplest-thing-that-accomplishes-the-goal)
-	- [Staying Focused](#staying-focused-on-getting-something-out-the-door-even-if-it-isnt-perfect)
+  - [Starting with content](#starting-with-content)
+  - [Building the simplest thing](#building-the-simplest-thing-that-accomplishes-the-goal)
+  - [Staying Focused](#staying-focused-on-getting-something-out-the-door-even-if-it-isnt-perfect)
 
 ## Motivation
 
@@ -82,4 +82,3 @@ Given that:
 - You lower your expectations
 - You Stay focused on the goal
 - Go for a truly minimal experience
-

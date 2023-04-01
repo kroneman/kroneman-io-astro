@@ -5,7 +5,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
-  "includes": [
-    "./vitest.setup.ts"
-  ]
+  "includes": ["./vitest.setup.ts"]
 }
