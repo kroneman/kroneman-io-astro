@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "6d96396d-0f59-448d-96dd-b45d8bbb633d",
+		"name": "Kroneman.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5164615"
+	},
+	"item": [
+		{
+			"name": "/api/subscribe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Adam",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Henry",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "a.l.kroneman@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/api/subscribe",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
