@@ -1,20 +1,19 @@
 import type { APIRoute } from 'astro';
-import SubscriptionService from './subscribe/SubscriptionService';
-import { ValidationError } from './subscribe/SubscriptionErrors';
+import SubscriptionService from '../../services/subscription/SubscriptionService';
+import { ValidationError } from '../../services/subscription/SubscriptionErrors';
+import MailChimpService from '../../services/subscription/MailChimpService';
 
 export const post: APIRoute = async ({ request }) => {
-  const subscriptionService = new SubscriptionService();
+  const subscriptionService = new SubscriptionService({
+    subscriptionClient: new MailChimpService(),
+  });
 
   try {
     const data = await request.formData();
     const email = `${data.get('email')}`;
-    const firstName = `${data.get('firstName')}`;
-    const lastName = `${data.get('lastName')}`;
 
     await subscriptionService.subscribeUser({
       email,
-      firstName,
-      lastName,
     });
 
     // Do something with the data, then return a success response

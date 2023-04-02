@@ -1,18 +1,24 @@
 import { object, string } from 'yup';
 import { ValidationError } from './SubscriptionErrors';
+import type MailChimpService from './MailChimpService';
 
 type NewSubscriberPayload = {
   email: string;
-  firstName: string;
-  lastName: string;
 };
 
 class SubscriptionService {
   subscriptionSchema = object().shape({
-    firstName: string().required(),
-    lastName: string().required(),
     email: string().email().required(),
   });
+  private subscriptionClient: MailChimpService;
+
+  constructor({
+    subscriptionClient,
+  }: {
+    subscriptionClient: MailChimpService;
+  }) {
+    this.subscriptionClient = subscriptionClient;
+  }
 
   async validate(payload: Partial<NewSubscriberPayload>) {
     try {
@@ -23,11 +29,8 @@ class SubscriptionService {
   }
 
   async subscribeUser(payload: NewSubscriberPayload) {
-    await this.validate(payload);
-  }
-
-  unsubscribeUser() {
-    throw new Error('Not Implemented');
+    const { email } = await this.validate(payload);
+    await this.subscriptionClient.subscribeUser({ email });
   }
 }
 
