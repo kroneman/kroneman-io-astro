@@ -15,18 +15,6 @@
 					"mode": "urlencoded",
 					"urlencoded": [
 						{
-							"key": "firstName",
-							"value": "Adam",
-							"type": "text",
-							"disabled": true
-						},
-						{
-							"key": "lastName",
-							"value": "Henry",
-							"type": "text",
-							"disabled": true
-						},
-						{
 							"key": "email",
 							"value": "a.l.kroneman@gmail.com",
 							"type": "text"
@@ -34,9 +22,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{host}}/api/subscribe",
+					"raw": "https://kroneman-io-astro-git-feature-email-subscription-kroneman.vercel.app/api/subscribe",
+					"protocol": "https",
 					"host": [
-						"{{host}}"
+						"kroneman-io-astro-git-feature-email-subscription-kroneman",
+						"vercel",
+						"app"
 					],
 					"path": [
 						"api",
