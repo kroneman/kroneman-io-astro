@@ -1,7 +1,10 @@
 import type { APIRoute } from 'astro';
-import SubscriptionService from '../../services/subscription/SubscriptionService';
-import { ValidationError } from '../../services/subscription/SubscriptionErrors';
-import MailChimpService from '../../services/subscription/MailChimpService';
+import SubscriptionService from '../../shared/EmailSubscription/services/SubscriptionService';
+import {
+  MemberExistsError,
+  ValidationError,
+} from '../../shared/EmailSubscription/services/SubscriptionErrors';
+import MailChimpService from '../../shared/EmailSubscription/services/MailChimpService';
 
 export const post: APIRoute = async ({ request }) => {
   const subscriptionService = new SubscriptionService({
@@ -19,7 +22,7 @@ export const post: APIRoute = async ({ request }) => {
     // Do something with the data, then return a success response
     return new Response(
       JSON.stringify({
-        message: 'Success!',
+        message: 'Successfully Subscribed!',
       }),
       { status: 200 }
     );
@@ -33,7 +36,15 @@ export const post: APIRoute = async ({ request }) => {
       );
     }
 
-    console.log(e);
+    if (e instanceof MemberExistsError) {
+      return new Response(
+        JSON.stringify({
+          message: 'Email is already subscribed',
+        }),
+        { status: 400 }
+      );
+    }
+
     return new Response(
       JSON.stringify({
         message: 'Internal Server Error',

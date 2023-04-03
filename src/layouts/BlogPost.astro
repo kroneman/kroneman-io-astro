@@ -3,9 +3,10 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from './sections/BaseHead.astro';
 import Header from './sections/Header.astro';
 
-import BlogPost from '../components/BlogPost';
-import Footer from '../components/Footer';
-import Layout from '../components/Layout';
+import BlogPost from '../shared/components/BlogPost';
+import EmailSubscriptionForm from '../shared/EmailSubscription/EmailSubscription';
+import Footer from '../shared/components/Footer';
+import Layout from '../shared/components/Layout';
 
 type Props = CollectionEntry<'posts'>['data'];
 
@@ -30,6 +31,9 @@ const articleProps = {
       <BlogPost {...articleProps}>
         <slot />
       </BlogPost>
+      <div class="flex flex-wrap justify-center">
+        <EmailSubscriptionForm className="mb-8 md:basis-1/2" client:visible />
+      </div>
     </Layout.Main>
     <Layout.Footer>
       <Footer />
