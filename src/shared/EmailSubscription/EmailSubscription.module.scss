@@ -1,0 +1,60 @@
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .Title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+    flex: 0 0 100%;
+  }
+
+  .SubTitle {
+    margin-bottom: 16px;
+    flex: 0 0 100%;
+  }
+
+  .InputGroup {
+    flex-grow: 1;
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .Input {
+    border: 1px solid #222;
+    border-right: 0;
+    height: 40px;
+    padding: 0 12px;
+    flex: 6;
+    flex-shrink: 0;
+  }
+
+  .SubmitButton {
+    flex: 2;
+    font-size: 16px;
+    border: 1px solid #343d46;
+    background: #343d46;
+    height: 40px;
+    padding: 6px 15px;
+    color: #fff;
+    transition: all 400ms;
+
+    &:hover {
+      border-color: #343d46;
+      background: transparent;
+      color: #343d46;
+    }
+  }
+
+  .ResponseMessage {
+    &.IsError {
+      color: #F32013;
+    }
+
+    &.IsSuccess {
+      color: #4BB543;
+    }
+  }
+}
