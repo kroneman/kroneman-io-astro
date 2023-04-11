@@ -12,5 +12,7 @@ export default defineConfig({
   site: 'https://example.com',
   output: 'server',
   integrations: [mdx(), sitemap(), tailwind(), react()],
-  adapter: vercel(),
+  adapter: vercel({
+    analytics: true
+  }),
 });
