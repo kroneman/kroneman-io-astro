@@ -6,7 +6,7 @@ pubDate: 'April 17 2023'
 
 ## Context
 
-I found myself starting a project recently where the business rules of the application were quite clear, and the value of the functionality had already been proven. I had to get something out the door quickly and my first instinct is typically "I'll write the tests later", but this rarely works out. From what I've gathered, there's a different strategy to writing tests for an "Immature" project, than when it "Matures".
+I found myself starting a project recently where the business rules of the application were quite clear. Further, the value and viability of the idea had already been proven. I had to get something out the door quickly and my first instinct is typically "I'll write the tests later", but this rarely works out. Rather, by focusing on integration tests, the speed penalty of writing tests will pay for itself as your application scales.
 
 ### Approaches to testing
 
@@ -87,11 +87,11 @@ Looking back at first it felt like the tests weren't accomplishing what I had ho
 
 #### The Refactor
 
-As primarily a Frontend Engineer I was learning a lot, diving into this project. From building out CloudFormation scripts, to `Github --> ECR --> ECS` deployment pipelines.
+I learned a lot throughout this project; from building out CloudFormation scripts, to deployment pipelines using Github, ECR and ECS.
 
 **Fortunately, I learned that the internals of my application were built wrong.**
 
-Essentially my `Controller` and my `Model` layer were doing and I was under-utilizing services & dependency injection.
+Essentially my `Controller` and my `Model` layer were doing more than they should have been, and I was under-utilizing services. This resulted in unclear boundaries within my application.
 
 So I started refactoring, and to my surprise...and delight. **None of my tests had to change**. I could refactor with confidence, knowing that the business logic I had tested, would still work as long as my tests passed.
 
