@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 html {
   box-sizing: border-box;
 }
@@ -7,12 +9,12 @@ html {
 }
 
 body {
-  font-family: Verdana, sans-serif;
+  font-family: $font-family-default;
   margin: auto;
   text-align: left;
-  background-color: #fff;
+  background-color: $background-color-default;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  line-height: 1.5;
-  color: #444;
+  line-height: $line-height-default;
+  color: $text-color-default;
 }
