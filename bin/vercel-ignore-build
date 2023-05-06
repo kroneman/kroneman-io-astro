@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# https://vercel.com/guides/how-do-i-use-the-ignored-build-step-field-on-vercel
+# Set
+# bash bin/vercel-ignore-build
+
+echo "VERCEL_ENV: $VERCEL_ENV";
+echo "VERCEL_GIT_COMMIT_REF: $VERCEL_GIT_COMMIT_REF";
+
+# https://vercel.com/docs/concepts/projects/environment-variables/system-environment-variables
+if [[ "$VERCEL_GIT_COMMIT_REF" == "gh-pages" ]] ; then
+  # Don't build
+    echo "🛑 - Build cancelled"
+    exit 0;
+else
+  # Proceed with the build
+    echo "✅ - Build can proceed"
+    exit 1;
+fi
