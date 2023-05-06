@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js v16
+      - name: Node Js
         uses: actions/setup-node@v2
         with:
-          node-version: v16.12.x
+          node-version: v18.12.x
 
       - name: Cache Node Modules
         id: cache-node-modules
